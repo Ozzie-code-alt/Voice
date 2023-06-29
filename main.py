@@ -4,10 +4,19 @@ import tkinter as tk
 
 import speech_recognition
 import pyttsx3 as tts
-
 from neuralintents import GenericAssistant
 
-print(speech_recognition.Microphone.list_microphone_names())
+
+# engine =tts.init()
+
+# voices = engine.getProperty('voices')
+# for voice in voices:
+#     print("Voice:")
+#     print(" - ID:", voice.id)
+#     print(" - Name:", voice.name)
+#     print(" - Languages:", voice.languages)
+
+    
 class Assistant:
     def __init__(self):
         self.recognizer = speech_recognition.Recognizer() #start instance
@@ -25,16 +34,15 @@ class Assistant:
     def create_file(self):
         with open("s0mefile.txt", "w") as f:
             f.write("Hello world")
-
-
+            
     def run_assistant(self):
         while True:
             try:
                 with speech_recognition.Microphone() as mic:
-                    self.recognizer.adjust_for_ambient_noise(mic, duration=0.2)
+                    self.recognizer.adjust_for_ambient_noise(mic, duration=0.5)
                     audio = self.recognizer.listen(mic)
-
                     text = self.recognizer.recognize_google(audio)
+                    print(text)
                     text = text.lower()
                     if "hello" in text: # if hey jake is 1 in audio process otherwise ignore
                         self.label.config(fg="red")

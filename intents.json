@@ -18,13 +18,13 @@
     {
       "tag": "neuralnine",
       "patterns": [
-        "What is NeuralNine",
-        "Tell me about NeuralNine",
-        "Who is NeuralNine",
-        "What is NeuralNine"
+        "What is neuralnine?",
+        "Tell me about neuralnine",
+        "Who is neuralnine?",
+        "What is neuralnine"
 
       ],
-      "response": [
+      "responses": [
         "Neural Nine is a Youtube Channel"
       ]
     },
@@ -34,10 +34,11 @@
         "What is your Name?",
         "WHat should i call you?"
       ],
-      "response": [
+      "responses": [
         "My name is Aeolian!"
       ]
     },
+
     {
       "tag": "file",
       "patterns": [
@@ -45,7 +46,17 @@
         "Create new file"
       ],
       "responses": []
+    },
+    {
+      "tag": "file",
+      "patterns": [
+        "Create a second file"
+        
+      ],
+      "responses": []
     }
+
+
 
   ]
 }
